@@ -1,6 +1,8 @@
 package com.gomjae.book.springboot.web;
 
 
+import com.gomjae.book.springboot.config.auth.LoginUser;
+import com.gomjae.book.springboot.config.auth.dto.SessionUser;
 import com.gomjae.book.springboot.service.PostsService;
 import com.gomjae.book.springboot.web.dto.PostsResponseDto;
 import lombok.RequiredArgsConstructor;
@@ -16,9 +18,13 @@ public class IndexController {
     private final PostsService postsService;
 
     @GetMapping("/")
-    public String index(Model model){
+    public String index(Model model, @LoginUser SessionUser user){
 
         model.addAttribute("posts",postsService.findAllDesc());
+
+        if(user != null){
+            model.addAttribute("userName",user.getName());
+        }
 
         return "index";
     }
