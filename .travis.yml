@@ -34,6 +34,17 @@ deploy:
     local_dir: deploy
     wait-until-deployed : true
 
+  - provider: codedeploy
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: springboot-service-build
+    key: springboot-service-project.zip
+    bundle_type: zip
+    application: springboot-service-project # 웹 콘솔에서 등록한 CodeDeploy 어플리케이션
+    deployment_group: springboot-service-project-group # 웹 콘솔에서 등록한 CodeDeploy 배포 그룹
+    region: ap-northeast-2
+    wait-until-deployed: true
+
 # CI 실행 완료시 메일로 알람
 notifications:
   email:
