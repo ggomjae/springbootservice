@@ -26,7 +26,7 @@ public class IndexController {
             model.addAttribute("userName",user.getName());
         }
 
-        return "index";
+        return "index";//
     }
 
     @GetMapping("/posts/save")
