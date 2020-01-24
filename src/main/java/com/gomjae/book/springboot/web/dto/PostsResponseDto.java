@@ -2,7 +2,7 @@ package com.gomjae.book.springboot.web.dto;
 
 import com.gomjae.book.springboot.domain.posts.Posts;
 import lombok.Getter;
-
+//
 @Getter
 public class PostsResponseDto {
 
