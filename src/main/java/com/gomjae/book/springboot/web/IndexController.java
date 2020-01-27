@@ -58,11 +58,17 @@ public class IndexController {
     }
 
     @GetMapping("/posts/update/{id}")
-    public String postsUpdate(@PathVariable Long id, Model model){
+    public String postsUpdate(@PathVariable Long id,@LoginUser SessionUser user, Model model){
 
         PostsResponseDto dto = postsService.findById(id);
-        model.addAttribute("post",dto);
+        boolean btnStatus = false;
 
-        return "posts-update";//
+        if(user.getName().equals(dto.getAuthor()) || user.getName().equals("민경재")){
+            btnStatus = true;
+        }
+
+        model.addAttribute("post",dto);
+        model.addAttribute("btnStatus",btnStatus);
+        return "posts-update";
     }
 }
