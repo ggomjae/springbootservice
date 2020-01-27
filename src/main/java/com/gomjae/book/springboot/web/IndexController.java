@@ -31,6 +31,22 @@ public class IndexController {
         return "index";//
     }
 
+    @GetMapping("/posts/get/{id}")
+    public String postsGet(@PathVariable Long id, @LoginUser SessionUser user, Model model){
+
+        PostsResponseDto dto = postsService.findById(id);
+        boolean btnStatus = false;
+
+        if(user.getName().equals(dto.getAuthor())){
+            btnStatus = true;
+        }
+
+        model.addAttribute("post",dto);
+        model.addAttribute("btnStatus",btnStatus);
+
+        return "posts-get";
+    }
+
     @GetMapping("/posts/save")
     public String postsSave(Model model , @LoginUser SessionUser user){
 
