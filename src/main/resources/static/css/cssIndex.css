@@ -9,5 +9,60 @@ body{
 }
 
 .title{
-    margin : 30px;
+    margin : 30px 30px;
+}
+
+#mainTitle h1{
+    float : left;
+    margin : 0 10px;
+}
+
+#questionMark, #ggomjae{
+     text-align: center;
+     display: inline-block;
+     width: 50px;
+     height: 50px;
+     box-shadow: 0 3px 6px rgba(0,0,0,.2), 0 3px 6px rgba(0,0,0,.2);
+     border-radius: 30px 30px;
+     background-size: cover;
+     margin-right: 1.1rem;
+ }
+
+.modal {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.modal__overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.modal__content {
+    background-color: #FFFACD;
+    padding: 20px 60px;
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+    width: 468px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.hidden {
+     display: none;
+}
+
+#hPont{
+    color : blue;
+}
+
+#questionMark:hover, #ggomjae:hover{
+    cursor:pointer;
 }

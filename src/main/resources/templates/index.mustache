@@ -1,8 +1,10 @@
 
 {{>layout/header}}
 
-<div class ='title'>
+<div class ='title' id = 'mainTitle'>
     <h1>Resume Feedback</h1>
+    <span id ='questionMark' ></span>
+    <span id ='ggomjae' onclick = "window.open('http://ggomjae.dothome.co.kr/')" ></span>
 </div>
 <div class ='col-md-12'>
     <div class ="row">
@@ -40,6 +42,14 @@
         {{/posts}}
         </tbody>
     </table>
-
+    <!-- Modal -->
+    <div class="modal hidden">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+            <h1 id="modalCon">1.Please look at my <h1 id = 'hPont'>resume.</h1></h1>
+            <h1 id="modalCon">2.Write your own <h1 id = 'hPont'>opinion.</h1></h1>
+            <button id ="closeBtn" class = "btn btn-secondary active">Close</button>
+        </div>
+    </div>
 </div>
 {{>layout/footer}}

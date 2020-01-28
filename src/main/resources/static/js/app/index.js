@@ -12,6 +12,14 @@ var main = {
         $('#btn-delete').on('click', function () {
             _this.delete();
         });
+
+        $('#questionMark').on('click',function(){
+            _this.modalFunction();
+        });
+
+        $('#closeBtn').on('click',function(){
+            _this.closeModal();
+        });
     },
     save : function () {
         var data = {
@@ -54,6 +62,7 @@ var main = {
             alert(JSON.stringify(error));
         });
     },
+
     delete : function () {
         var id = $('#id').val();
 
@@ -68,8 +77,17 @@ var main = {
         }).fail(function (error) {
             alert(JSON.stringify(error));
         });
-    }
+    },
 
+    modalFunction : function(){
+        var modal = document.querySelector(".modal");
+        modal.classList.remove("hidden");
+    },
+
+    closeModal : function(){
+        var modal = document.querySelector(".modal");
+        modal.classList.add("hidden");
+    }
 };
 
 main.init();
