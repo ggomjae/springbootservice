@@ -28,6 +28,14 @@ body{
      margin-right: 1.1rem;
  }
 
+#questionMark{
+    background-image: url('/images/qMark.jpg');
+}
+
+#ggomjae{
+    background-image: url('/images/gomjae.jpg');
+}
+
 .modal {
    position: fixed;
    top: 0;
