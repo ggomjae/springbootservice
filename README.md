@@ -3,7 +3,7 @@ Springboot webservice
 KyungJae's PORTFOLIO Feedback webservice
 - 
 Author 민경재 <br>
-2019-12-30 ~ 2020-01-281<br>
+2019-12-30 ~ 2020-01-28<br>
 
 ### 기능 구현
 
