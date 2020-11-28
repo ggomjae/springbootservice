@@ -1,9 +1,9 @@
-Springboot webservice
+Springboot webservice 🐻
 ============ 
 KyungJae's PORTFOLIO Feedback webservice
-- 
-Author 민경재 <br>
-2019-12-30 ~ 2020-01-28<br>
+
+* Author 민경재[ggomjae] <br>
+* 개인 개발 블로그 링크 <https://blog.naver.com/ggomjae> <br>
 
 ### 기능 구현
 
